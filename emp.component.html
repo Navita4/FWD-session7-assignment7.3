@@ -1,0 +1,26 @@
+<!-- Employee List-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
+            <h1>Directive Example</h1>
+        </div>
+        <div class="col-lg-6 col-lg-offset-3">
+            <table class="table table-bordered table-striped">
+                <!-- Table Heading-->
+                <tr>
+                    <th>Index</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                </tr>
+                <!-- Looping through employee object-->
+                <ng-template ngfor let-emp[ngforof]="employees" let i=index">
+                    <tr>
+                        <td>HoverOverElement<b>{{i+1}}</b></td>
+                   <td> {{emp.FirstName}}</td>
+                   <td>{{emp.LastName}}</td>
+                </tr>
+                </ng-template>
+            </table>
+        </div>
+    </div>
+</div>
